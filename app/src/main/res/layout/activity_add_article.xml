@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_article">
+    <ImageButton
+        android:id="@+id/backbtn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="38dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrowleft" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/monster"
+        android:text="Add New Blog here"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backbtn" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/BlogTitle"
+        android:layout_width="350dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="20dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="100"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/button2"
+            android:hint="Enter Blog Title" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/monster"
+        android:text="Blog Title"
+        android:textColor="#181717"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/monster"
+        android:text="Blog Description"
+        android:textColor="#181717"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/BlogTitle"
+        app:layout_constraintTop_toBottomOf="@+id/BlogTitle" />
+
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/BlogDescription"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/buttons1"
+            android:hint="Enter Blog Description" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/AddBlogbutton"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/fillbutton2"
+        android:text="Add Blog"
+        android:textColor="#FFFCFC"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/BlogDescription"
+        app:layout_constraintStart_toStartOf="@+id/BlogDescription"
+        app:layout_constraintTop_toBottomOf="@+id/BlogDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
